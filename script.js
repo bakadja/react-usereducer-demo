@@ -81,7 +81,7 @@ function Counter(props) {
   var t2;
   if ($[2] !== state.name) {
     t2 = /*#__PURE__*/_jsxs("h1", {
-      children: ["Hello, je suis ", state.name, "!"]
+      children: ["Hello, my name is ", state.name, " \uD83D\uDC4B"]
     });
     $[2] = state.name;
     $[3] = t2;
@@ -91,7 +91,7 @@ function Counter(props) {
   var t3;
   if ($[4] !== state.age) {
     t3 = /*#__PURE__*/_jsxs("p", {
-      children: ["et j ai ", state.age, " ans  "]
+      children: ["I am  ", state.age, " years old"]
     });
     $[4] = state.age;
     $[5] = t3;
@@ -102,16 +102,17 @@ function Counter(props) {
   var t5;
   if ($[6] === Symbol["for"]("react.memo_cache_sentinel")) {
     t4 = /*#__PURE__*/_jsx("input", {
+      placeholder: "Change your name...",
       onChange: function onChange(e) {
         return dispatch({
-          type: "setName",
+          type: ACTION.SET_NAME,
           payload: e.target.value
         });
       }
     });
     t5 = /*#__PURE__*/_jsx("button", {
       onClick: handleClick,
-      children: "incremnter mon age"
+      children: "Increase my age"
     });
     $[6] = t4;
     $[7] = t5;
@@ -121,9 +122,12 @@ function Counter(props) {
   }
   var t6;
   if ($[8] !== t2 || $[9] !== t3) {
-    t6 = /*#__PURE__*/_jsxs("div", {
+    t6 = /*#__PURE__*/_jsx("div", {
       className: "container",
-      children: [t2, t3, t4, t5]
+      children: /*#__PURE__*/_jsxs("div", {
+        className: "card",
+        children: [t2, t3, t4, t5]
+      })
     });
     $[8] = t2;
     $[9] = t3;
